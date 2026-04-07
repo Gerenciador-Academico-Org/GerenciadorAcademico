@@ -1,0 +1,14 @@
+{
+  "professores": ["Cleber Moreira", "Assistente Virtual", "Dra. Adriana"],
+  "salas": ["Sala 01", "Sala 02", "Lab Química"],
+  "horarios": ["08:00", "09:00", "10:00"],
+  "disciplinas": ["Direito Civil", "Lógica Python", "Química Experimental"],
+  "restricoes": {
+    "indisponibilidade": {
+      "Cleber Moreira": ["08:00"]
+    },
+    "obrigatoriedade_sala": {
+      "Química Experimental": "Lab Química"
+    }
+  }
+}
