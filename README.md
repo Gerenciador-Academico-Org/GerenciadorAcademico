@@ -46,4 +46,4 @@ Inicie o servidor:
 
 Bash
 python manage.py runserver
-✒️ Desenvolvido com rigor técnico por Cleber Moreira da Rocha e Equipe.
+✒️ Desenvolvido pela equipe Residência Tecnológica
