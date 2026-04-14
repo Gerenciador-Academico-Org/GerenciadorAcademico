@@ -1,24 +1,31 @@
-# 🎓 Gerenciador Acadêmico - IFB Bolsa Futuro Digital
+# 🎓 Gerenciador Acadêmico
 
-Sistema inteligente para gestão de grade horária acadêmica, desenvolvido como projeto prático para o curso de Desenvolvimento de Software.
+> **IFB - Bolsa Futuro Digital | Projeto Integrador de Desenvolvimento de Software**
 
-## 🚀 Status do Projeto: Sprint 6 em andamento
-- [x] **Sprint 1 & 2**: Setup Django, Custom User Model e Autenticação JWT.
-- [x] **Sprint 3 & 4**: Gestão de Cursos, Turmas, Disciplinas e Salas.
-- [x] **Sprint 5**: Estrutura da Matriz Semanal (Matriz de Aulas).
-- [ ] **Sprint 6**: Lógica de Validação de Conflitos (Em desenvolvimento).
+Uma API RESTful robusta e inteligente para a gestão de grades horárias acadêmicas. O sistema foi projetado para organizar o corpo docente e a infraestrutura, garantindo a integridade da alocação de salas e professores de forma automatizada.
 
-## 🛠️ Tecnologias
-- **Backend**: Django 6.0 + Django REST Framework.
-- **Segurança**: SimpleJWT (Tokens de 7 dias).
-- **Banco de Dados**: SQLite (Desenvolvimento).
+## ✨ Funcionalidades em Destaque
+* 🔐 **Segurança Avançada:** Autenticação de usuários via tokens JWT (JSON Web Tokens).
+* 🏛️ **Gestão Estrutural:** Controle relacional de Cursos, Turmas, Disciplinas e Salas físicas.
+* 🧠 **Validação Inteligente (Anti-Conflito):** Algoritmo nativo que impede o agendamento de um professor em duas turmas simultâneas ou a sobreposição de aulas na mesma sala.
+* ⚙️ **Painel Administrativo:** Interface Django Admin customizada para a gestão rápida de dados.
 
-## 💻 Como rodar o projeto
-1. Clone o repositório: `git clone https://github.com/Gerenciador-Academico-Org/GerenciadorAcademico.git`
-2. Ative a venv: `.\venv\Scripts\activate`
-3. Instale as dependências: `pip install -r requirements.txt`
-4. Rode as migrações: `python manage.py migrate`
-5. Inicie o servidor: `python manage.py runserver`
+## 🚀 Roadmap e Entregas (Sprints)
+- [x] **Sprint 1 & 2:** Setup Django, Custom User Model e Autenticação JWT.
+- [x] **Sprint 3 & 4:** Gestão de Cursos, Turmas, Disciplinas e Salas.
+- [x] **Sprint 5:** Estrutura da Matriz Semanal (Modelagem de Aulas).
+- [x] **Sprint 6:** Lógica de Validação de Conflitos de Horários e Infraestrutura.
+- [ ] **Sprint 7:** Testes Automatizados e Refatoração (Próximo passo).
 
----
-*Desenvolvido por Cleber Moreira da Rocha e Equipe.*
+## 🛠️ Tecnologias Utilizadas
+* **Linguagem:** Python 3.13
+* **Framework:** Django 6.0.3 & Django REST Framework (DRF)
+* **Autenticação:** djangorestframework-simplejwt
+* **Banco de Dados:** SQLite (Ambiente de Desenvolvimento)
+
+## 💻 Como executar o projeto localmente
+
+1. **Clone o repositório:**
+   ```bash
+   git clone [https://github.com/Gerenciador-Academico-Org/GerenciadorAcademico.git](https://github.com/Gerenciador-Academico-Org/GerenciadorAcademico.git)
+   cd GerenciadorAcademico

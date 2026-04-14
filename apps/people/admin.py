@@ -1,16 +1,14 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
-from .models import User, VinculoUsuarioCurso
+from .models import User # Ajuste se o nome do seu modelo for diferente (ex: CustomUser)
 
-# Personalizando a visualização do Usuário no Admin
-class MyUserAdmin(UserAdmin):
+class CustomUserAdmin(UserAdmin):
     model = User
-    # Adicionando nossos campos personalizados (papel e telefone) à interface
-    fieldsets = UserAdmin.fieldsets + (
-        ('Informações Acadêmicas', {'fields': ('papel', 'telefone', 'ativo')}),
+    
+    # Esta é a linha mágica que adiciona o E-mail na tela de "Adicionar Usuário" (o popup do botão +)
+    add_fieldsets = UserAdmin.add_fieldsets + (
+        ('Informações Pessoais Obrigatórias', {'fields': ('email',)}),
     )
-    list_display = ['email', 'first_name', 'papel', 'is_staff', 'ativo']
 
-# Registrando os modelos
-admin.site.register(User, MyUserAdmin)
-admin.site.register(VinculoUsuarioCurso)
+# Registra o modelo com as novas regras visuais
+admin.site.register(User, CustomUserAdmin)

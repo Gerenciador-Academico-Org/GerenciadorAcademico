@@ -2,4 +2,5 @@ from django.apps import AppConfig
 
 class CoreConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'apps.core'  # Apenas esta linha de 'name'
+    name = 'apps.core'
+    verbose_name = 'Núcleo Geral' # <-- Adicione esta linha
