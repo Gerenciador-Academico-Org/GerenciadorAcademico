@@ -1,8 +1,10 @@
 from django.contrib import admin
-from django.urls import path
-from apps.schedule.views import dashboard_grade # Importe a view que acabamos de criar
+from django.urls import path, include
+from core import views
 
 urlpatterns = [
+    path('', views.home, name='home'),
+    path('grade/', views.grade_visual, name='grade_visual'),
     path('admin/', admin.site.urls),
-    path('grade/', dashboard_grade, name='dashboard-grade'), # Nossa nova tela!
+    path('api/', include('core.urls')),
 ]
